@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhaani's Birthday Wishlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="bunting" aria-hidden="true"></div>
+      <p class="eyebrow">Birthday wishlist</p>
+      <h1>Dhaani's Birthday Wishlist</h1>
+      <p class="intro">A few things I've had my eye on. Click any tag to open it in the shop where I found it.</p>
+    </header>
+
+    <form class="filters" id="filters" aria-label="Filter the wishlist">
+      <label class="field">
+        <span>Price</span>
+        <select id="price">
+          <option value="0-Infinity">Any price</option>
+          <option value="0-300">Under ₹300</option>
+          <option value="300-500">₹300 – ₹500</option>
+          <option value="500-1000">₹500 – ₹1,000</option>
+          <option value="1000-Infinity">Over ₹1,000</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Shop</span>
+        <select id="shop">
+          <option value="All">All shops</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Sort by</span>
+        <select id="sort">
+          <option value="default">My picks</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </label>
+      <div class="filter-status">
+        <span id="count"></span>
+        <button type="reset" id="clear">Clear filters</button>
+      </div>
+    </form>
+
+    <ul class="grid" id="grid"></ul>
+    <p class="empty" id="empty" hidden>Nothing matches these filters. Try a different price range or shop.</p>
+
+    <p class="note">Prices are what they were when I added them and may have changed.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
